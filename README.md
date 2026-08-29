@@ -88,3 +88,66 @@ TF-IDF Vectorization
 Machine Learning Model
        ↓
 Category + Severity
+
+## 🖥️ Application
+
+The Streamlit application allows a user to enter a campus complaint and receive:
+
+- Predicted category
+- Predicted severity
+- Severity confidence
+
+## 📁 Project Structure
+
+```text
+campus-complaint-intelligence/
+│
+├── app/
+│   └── app.py
+│
+├── data/
+│   └── raw/
+│       └── complaints_raw.xlsx.numbers
+│
+├── models/
+│   ├── category_model.pkl
+│   ├── category_tfidf.pkl
+│   ├── severity_model.pkl
+│   └── severity_tfidf.pkl
+│
+├── notebooks/
+│   └── data_exploration.ipynb
+│
+├── requirements.txt
+│
+└── README.md
+
+📈 Results
+| Task                    | Model               |   Accuracy |
+| ----------------------- | ------------------- | ---------: |
+| Category Classification | Linear SVM          | **94.55%** |
+| Severity Classification | Logistic Regression | **72.73%** |
+
+⚠️ Limitations
+
+The dataset is relatively small, with only 273 training complaints. Severity prediction is more difficult because the distinction between severity levels is sometimes subjective.
+
+The model therefore provides an automated prediction rather than a guaranteed assessment.
+
+🛠️ Technologies Used
+Python
+Pandas
+NumPy
+Scikit-learn
+TF-IDF
+Logistic Regression
+Linear SVM
+Streamlit
+Joblib
+Google Colab
+GitHub
+
+👩‍💻 Author
+Manashvini Dave
+
+
