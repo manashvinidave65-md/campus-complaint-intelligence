@@ -77,7 +77,7 @@ def clean_text(text):
 
 
 # =========================================================
-# PREDICTION FUNCTION
+# PREDICTION
 # =========================================================
 
 def predict_complaint(complaint):
@@ -159,21 +159,13 @@ with st.sidebar:
 
     st.divider()
 
-    st.write(
-        "Dataset: 273 training complaints"
-    )
-
-    st.write(
-        "Categories: 5"
-    )
-
-    st.write(
-        "Severity Levels: 4"
-    )
+    st.write("Dataset: 273 complaints")
+    st.write("Categories: 5")
+    st.write("Severity Levels: 4")
 
 
 # =========================================================
-# MAIN INPUT
+# COMPLAINT INPUT
 # =========================================================
 
 st.subheader("📝 Submit a Complaint")
@@ -220,21 +212,18 @@ if st.button(
         col1, col2, col3 = st.columns(3)
 
         with col1:
-
             st.metric(
                 "Complaint Category",
                 category
             )
 
         with col2:
-
             st.metric(
                 "Predicted Severity",
                 severity
             )
 
         with col3:
-
             st.metric(
                 "Model Confidence",
                 f"{confidence * 100:.2f}%"
@@ -248,8 +237,7 @@ if st.button(
 
             st.info(
                 "ℹ️ The model has relatively low confidence "
-                "in this severity prediction. This is expected "
-                "for some ambiguous complaints."
+                "in this severity prediction."
             )
 
         elif confidence < 0.75:
@@ -284,7 +272,6 @@ examples = [
 ]
 
 for example in examples:
-
     st.write("•", example)
 
 
@@ -308,9 +295,18 @@ with col2:
 
 with col3:
     st.write("**3️⃣ TF-IDF**")
-    st.write("Important words are converted into numerical features.")
+    st.write("Text is converted into numerical features.")
 
 with col4:
     st.write("**4️⃣ Prediction**")
     st.write("ML models predict category and severity.")
-        )
+
+
+      
+  
+
+
+    
+
+
+
