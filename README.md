@@ -76,6 +76,7 @@ Severity levels:
 
 ## 🔄 Machine Learning Pipeline
 
+```text
 Student Complaint
        ↓
 Text Cleaning
